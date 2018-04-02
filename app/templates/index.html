@@ -1,0 +1,118 @@
+{% extends 'base_template.html' %}
+{% block content %}
+    <!-- Icon Cards-->
+    <div class="row">
+        <div class="col-xl-4 col-sm-6 mb-4">
+            <div class="card text-white bg-primary o-hidden h-100">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <i class="fa fa-fw fa-comments"></i>
+                    </div>
+                    <div class="mr-5" id="total-calls"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-sm-6 mb-4">
+            <div class="card text-white bg-warning o-hidden h-100">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <i class="fa fa-fw fa-list"></i>
+                    </div>
+                    <div class="mr-5" id="total-active-extensions"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-sm-6 mb-4">
+            <div class="card text-white bg-success o-hidden h-100">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <i class="fa fa-fw fa-shopping-cart"></i>
+                    </div>
+                    <div class="mr-5" id="total-un-answer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Example Bar Chart Card-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-bar-chart"></i> PBX - Resumen
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-8 my-auto">
+                            <div class="small text-muted">Top 5 Make Calls By Extension:</div>
+                            <br/>
+                            <canvas id="myBarChart" width="100" height="50"></canvas>
+                        </div>
+                        <div class="col-sm-4 text-center my-auto">
+                            <div class="small text-muted">Ext. that made the largest number of calls:</div>
+                            <div class="h4 mb-0 text-primary" id="data-1"></div>
+                            <div class="small text-muted" id="label-1"></div>
+                            <hr>
+                            <div class="small text-muted">Ext. that received the most calls:</div>
+                            <div class="h4 mb-0 text-warning" id="data-2"></div>
+                            <div class="small text-muted" id="label-2"></div>
+                            <hr>
+                            <div class="small text-muted">Ext. with the largest number of unanswered calls:</div>
+                            <div class="h4 mb-0 text-success" id="data-3"></div>
+                            <div class="small text-muted" id="label-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer small text-muted"></div>
+            </div>
+            <div class="card mb-0 mt-4">
+                <div class="card-header">
+                    <i class="fa fa-table"></i> Calls
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Source</th>
+                                    <th>Destionation</th>
+                                    <th>Status</th>
+                                    <th>Duration</th>
+                                    <th>Bill Sec</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Source</th>
+                                    <th>Destionation</th>
+                                    <th>Status</th>
+                                    <th>Duration</th>
+                                    <th>Bill Sec</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer small text-muted"></div>
+            </div>
+            <br/>
+            <!-- /Card Columns-->
+        </div>
+        <div class="col-lg-4">
+            <!-- Example Pie Chart Card-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-pie-chart"></i> Top 5 Received Calls By Extension
+                </div>
+                <div class="card-body">
+                    <canvas id="myPieChart" width="100%" height="100"></canvas>
+                </div>
+                <div class="card-footer small text-muted"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

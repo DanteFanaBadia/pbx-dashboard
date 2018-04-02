@@ -1,0 +1,9 @@
+wedding-app:
+  build: .
+  volumes:
+    - /usr/pbx-dashboard:/usr/pbx-dashboard
+  ports:
+    - "80:5000"
+  environment:
+    - SERVER_NAME=dashboard-pbx.dfb.com.do
+    - SECRET_KEY=Gox0Agv8KS
