@@ -1,4 +1,4 @@
-wedding-app:
+pbx-dashboard-app:
   build: .
   volumes:
     - /usr/pbx-dashboard:/usr/pbx-dashboard
