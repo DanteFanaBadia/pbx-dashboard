@@ -3,7 +3,6 @@ from app.extensions import api, ma, sk, db
 from sqlalchemy import func, desc
 from sqlalchemy.sql import label
 from flask import Flask, render_template, jsonify
-from time import sleep
 from threading import Thread, Event
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -74,7 +73,6 @@ class NotificationThread(Thread):
             if current_count < new_count:
                 sk.emit('notified', new_count, namespace='/notification')
                 current_count = new_count
-            sleep(self.delay)
 
     def run(self):
         self.notified()
