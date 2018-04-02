@@ -8,7 +8,6 @@ docutils
 Flask
 Flask-Assets
 flask-marshmallow
-Flask-Restless
 Flask-MySQL
 Flask-Script
 Flask-SocketIO
@@ -30,3 +29,4 @@ python-socketio
 pytz
 six
 SQLAlchemy
+Flask-Restless
