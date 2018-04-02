@@ -13,6 +13,7 @@
     var label1 = $('#label-1');
     var label2 = $('#label-2');
     var label3 = $('#label-3');
+    var loading = $('#loading');
 
     var socket = io.connect(endpoint + '/notification');
     socket.on('notified', onCalled);
@@ -27,6 +28,7 @@
     });
 
     function requestData(){
+        loading.show();
         $.ajax({
             method: 'GET',
             url: endpoint + '/dashboard',
@@ -62,6 +64,7 @@
         loadPieChart(data.top_got_calls);
         loadLineChart(data.top_make_calls);
         console.log(data);
+        loading.hide();
     }
 
     function loadLineChart(data){
