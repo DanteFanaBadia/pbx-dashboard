@@ -3,7 +3,6 @@ import os
 
 class BaseConfig(object):
     SITE_NAME = 'Dashboard-PBX'
-    SERVER_NAME = os.environ.get('SERVER_NAME', 'localhost:5000')
     SECRET_KEY = os.environ.get('SECRET_KEY', 'Gox0Agv8KS')
 
     MYSQL_DATABASE_USER = 'pbx-dashboard'

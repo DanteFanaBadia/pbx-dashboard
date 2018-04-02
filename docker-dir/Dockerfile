@@ -15,7 +15,7 @@ RUN pip install -r /tmp/requirements.txt
 WORKDIR /usr/pbx-dashboard
 
 #Expose ports
-EXPOSE 5000
+EXPOSE 8080
 
 #Command to run app
 CMD [ "python", "./run.py" ]
