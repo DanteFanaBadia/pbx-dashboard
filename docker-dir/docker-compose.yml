@@ -1,5 +1,6 @@
 pbx-dashboard-app:
   build: .
+  container_name: pbx-dashboard
   volumes:
     - /usr/pbx-dashboard:/usr/pbx-dashboard
   ports:
