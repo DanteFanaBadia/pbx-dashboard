@@ -8,6 +8,7 @@ docutils
 Flask
 Flask-Assets
 flask-marshmallow
+Flask-Restless
 Flask-MySQL
 Flask-Script
 Flask-SocketIO
