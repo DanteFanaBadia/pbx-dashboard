@@ -15,7 +15,7 @@
     var label3 = $('#label-3');
     var loading = $('#loading');
 
-    var socket = io.connect(endpoint + '/notification');
+    var socket = io.connect('/notification');
     socket.on('notified', onCalled);
 
     function onCalled(data){
@@ -31,7 +31,7 @@
         loading.show();
         $.ajax({
             method: 'GET',
-            url: endpoint + '/dashboard',
+            url: '/dashboard',
             contentType: 'application/json',
             success: onSuccess,
             error: onError
